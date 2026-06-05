@@ -1,9 +1,15 @@
 import React from 'react'
 import {assets} from '../assets/assets';
+import {motion} from 'framer-motion'
 
 const Description = () => {
   return (
-    <div className='flex flex-col items-center
+    <motion.div 
+    initial={{opacity:0.2, y:100}}
+    whileInView={{opacity:1, y:0}}
+    transition={{duration:0.5}}
+    viewport={{once:true}}
+    className='flex flex-col items-center
     justify-center my-24- p-4 md:px-28'>
       <h1 className='text-3xl sm:text-4xl
       font-semibold mb-2'>Create AI Images</h1>
@@ -25,7 +31,7 @@ const Description = () => {
                 Powered by advanced AI technology, the creative possibilities are limitless! </p>
                 </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
